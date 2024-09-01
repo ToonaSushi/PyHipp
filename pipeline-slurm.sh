@@ -5,6 +5,7 @@
 #SBATCH --time=1:00:00   # walltime
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
+
 #SBATCH -J "example-job"   # job name
 
 ## /SBATCH -p general # partition (queue)
@@ -39,3 +40,4 @@ aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:xxxxxx:awsnotify --messag
 
 #SBATCH -o pipe-slurm.%N.%j.out # STDOUT
 #SBATCH -e pipe-slurm.%N.%j.err # STDERR
+

@@ -1,4 +1,5 @@
 def getChannelInArray(channel_name, fig):
+# function that arranges channels for plotting
     rows = 5
     cols = 8
     channel_num = int(channel_name[-3:])
