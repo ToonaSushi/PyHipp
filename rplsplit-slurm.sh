@@ -5,6 +5,7 @@
 #SBATCH --time=24:00:00   # walltime
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
+#SBATCH --cpus-per-task=1	# number of processors per task
 #SBATCH -J "rplspl"   # job name
 
 ## /SBATCH -p general # partition (queue)
@@ -26,4 +27,4 @@ DPT.objects.processDirs(level='channel', cmd='import PyHipp as pyh; from PyHipp 
 print(time.localtime()); \
 print(time.time()-t0);"
 
-aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:180294188152:awsnotify --message "RPLSplitJobDone"
+aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:018084650241:awsnotify --message "RPLSplitJobDone"
